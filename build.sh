@@ -1,0 +1,1 @@
+pyinstaller wb.py -F --windowed --icon ak.icns
