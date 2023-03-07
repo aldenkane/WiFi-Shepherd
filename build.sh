@@ -1,1 +1,1 @@
-pyinstaller wb.py -F --windowed --icon ak.icns
+pyinstaller wb.py -F --windowed --icon ak.icns --name "Wifi Shepherd"
