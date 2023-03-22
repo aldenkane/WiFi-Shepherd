@@ -5,17 +5,15 @@
 import webbrowser
 import netifaces
 
-def checkWPAConn():
-    alden = 0
-
 # Need to validate IPv4 here
 def getDefaultGateway():
     try:
         gws = netifaces.gateways()
-        gateway_addr = gws['default'][netifaces.AF_INET][0]
+        gateway_addr = gws['default'][netifaces.AF_INET][0]        
         return gateway_addr
     # Handle VPN Connected Case - Find something that looks like IPv4 Gateway
     except:
+        print('No WiFi Connection or VPN in Use')
         gateway_addr_vpn = gws[2][0][0]
         return gateway_addr_vpn
 
